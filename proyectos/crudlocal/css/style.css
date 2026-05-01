@@ -1,0 +1,61 @@
+/* Estética Pure Black & Orange */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    background-color: #0a0a0a !important;
+    border-bottom: 2px solid #ff4500;
+}
+
+.navbar-brand, .nav-link {
+    color: #ff4500 !important;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.container {
+    border-color: 1px solid #ff4500;
+}
+
+.card {
+    background-color: #0a0a0a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #ffffff;
+}
+
+input::placeholder {
+    color: #9C9C9C !important;
+}
+
+.table {
+    color: #ffffff;
+    border-color: #333;
+}
+
+
+.table thead {
+    background-color: #ff4500;
+    color: #000;
+}
+
+/* Botones personalizados */
+.btn-primary { background-color: #ff4500; border: none; }
+.btn-primary:hover { background-color: #e63e00; }
+
+.btn-warning { background-color: #ffae00; border: none; }
+.btn-danger { background-color: #ff0000; border: none; }
+
+input, select {
+    background-color: #1a1a1a !important;
+    border: 1px solid #444 !important;
+    color: white !important;
+}
+
+input:focus {
+    border-color: #ff4500 !important;
+    box-shadow: 0 0 5px rgba(255, 69, 0, 0.5) !important;
+}

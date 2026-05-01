@@ -1,0 +1,215 @@
+/*--------------------------------*/
+/* COLORES DEFINIDOS */
+/*--------------------------------*/
+:root {
+    --negro-brillante: #050505;
+    --rojo-principal: #d90429;
+    --rojo-oscuro: #800000;
+    --blanco-texto: #F0F9FF;
+    --gris-texto: #acabab;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #111111 0%, var(--negro-brillante) 100%);
+    color: var(--blanco-texto);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+#cuerpo-principal {
+    display: block;
+    min-height: 80vh;
+    padding: 0;
+    
+}
+
+/*--------------------------------*/
+/* ESTILO DEL NAVBAR */
+/*--------------------------------*/
+.mi-navbar {
+    background-color: rgba(20, 20, 20, 0.7) !important; /* Un gris casi negro con transparencia */
+    backdrop-filter: blur(15px); /* Esto hace que lo que pase por detrás se vea borroso */
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Un borde blanquecino casi invisible */
+    padding: 15px;
+}
+.mi-navbar .navbar-brand {
+    color: var(--blanco-texto);
+    font-weight: bold;
+}
+
+.mi-navbar .nav-link {
+    color: var(--blanco-texto) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--rojo-principal) !important; /* El color que quieras cuando se ilumine */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Opcional: un efecto de brillo */
+    transition: color 0.3s ease; /* Para que el cambio no sea brusco */
+}
+
+
+
+/*--------------------------------*/
+/* COLOR DE LA LETRA N DEL NAVBAR */
+/*--------------------------------*/
+.letra-color {
+    color: var(--rojo-principal);
+    font-weight: bold;
+}
+
+/*--------------------------------*/
+/* ESTILO DEL PERFIL */
+/*--------------------------------*/
+
+.presentacion span {
+    letter-spacing: 1px;
+    font-size: clamp(40px, 8vw, 50px);
+    font-weight: bold;
+    color: var(--rojo-principal)
+}
+
+.home-pag h1 {
+    letter-spacing: 1px;
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: bold;
+    color: var(--gris-texto)
+}
+
+.home-pag h2 {
+    color: var(--rojo-principal)
+}
+
+.perfil-texto {
+    align-items: center;
+    text-align: left;
+}
+
+
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    
+}
+
+/*--------------------------------*/
+/* FOTO DE PERFIL */
+/*--------------------------------*/
+.profile-photo {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    
+}
+
+
+.container .title {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*--------------------------------*/
+/* SECCIÓN EDUCACIÓN */
+/*--------------------------------*/
+.titulo{
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    font-size: x-large;
+    color: var(--rojo-principal)
+}
+
+.subtitulo, .fecha {
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    font-size: x-large;
+    color: var(--gris-texto)
+}
+
+/*--------------------------------*/
+/* DISEÑO DEL CONTAINER */
+/*--------------------------------*/
+.box {
+    border-radius: 15px;
+    border: 1px solid var(--rojo-oscuro) ;
+    box-shadow: inset 0 0 20px rgba(217, 4, 41, 0.05), 0 15px 35px rgba(0, 0, 0, 0.9);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    padding: 20px;
+    max-width: 1000px;
+
+}
+
+/*--------------------------------*/
+/* DISEÑO FOOTER */
+/*--------------------------------*/
+.footer {
+    text-align: center;
+    width: 100%;
+    background-color: rgba(20, 20, 20, 0.7) !important;
+    padding: 15px;
+    color: var(--gris-texto)
+}
+
+.foot {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.foot a {
+    text-decoration: none;
+    color: var(--gris-texto);
+    transition: 0.3s;
+    margin: 0 10px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.foot a:hover {
+    color: var(--rojo-principal);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/*--------------------------------*/
+/* ANIMACIONES */
+/*--------------------------------*/
+
+/* --- CONFIGURACIÓN BASE --- */
+/* Estado base: invisible y desplazado */
+.scroll-reveal {
+    opacity: 0;
+    transition: all 0s; /* Reseteo instantáneo cuando está fuera de vista */
+}
+
+.reveal-down { transform: translateY(80px); }
+.reveal-zoom { transform: scale(0.1); transform-origin: center; }
+
+/* Estado activo: animación fluida al bajar */
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Tiempos específicos de entrada */
+.reveal-down.active {
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.reveal-zoom.active {
+    transition: opacity 1s ease-out, transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.reveal-left > * {
+    opacity: 0;
+    transform: translateX(-80px); /* Desde la izquierda (-X) */
+    transition: all 0.5s; /* Reseteo rápido al subir */
+}
+
+.reveal-right > * {
+    opacity: 0;
+    transform: translateX(80px); /* Desde la derecha (+X) */
+    transition: all 0.5s; /* Reseteo rápido al subir */
+}

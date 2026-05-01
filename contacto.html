@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+    <div id="nav-placeholder"></div>
+    <script src="js/navbar.js"></script>
+
+
+    <section class="contacto">
+        <div class="contact-container">
+            <h2 class="titulo">Contacto</h2>
+            <p class="section-text">¿Buscas un desarrollador o tienes alguna consulta? Envíame un mensaje.</p>
+
+            <form id="contact-form" action="https://formspree.io/f/xjgjlpjy" method="POST" class="form-wrapper">
+                <div class="input-group">
+                    <input type="text" name="name" id="name" placeholder="Nombre" required>
+                </div>
+                
+                <div class="input-group">
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+
+                <div class="input-group">
+                    <textarea name="message" id="message" rows="5" placeholder="Mensaje." required></textarea>
+                </div>
+
+                <button type="submit" id="submit-btn" class="btn-neon">
+                    <span class="btn-text">Enviar Mensaje</span>
+                </button>
+                
+                <div id="form-status" class="status-msg"></div>
+            </form>
+        </div>
+    </section>
+
+
+
+
+    <div id="foot-placeholder"></div>
+    <script src="js/footer.js"></script>
+
+    <script src="js/contacto.js"></script>  
+</body>
+</html>

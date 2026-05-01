@@ -1,0 +1,81 @@
+:root {
+    --bg-black: #000000;
+    --input-bg: #0a0a0a;
+    --accent: #d90429; 
+    --text-gray: #a8b2d1;
+    --white: #e6f1ff;
+}
+
+.contacto {
+    background-color: var(--bg-black);
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo {
+    color: var(--accent);
+}
+
+.contact-container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.accent { color: var(--accent); }
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--input-bg);
+    border: 1px solid #222;
+    border-radius: 4px;
+    color: var(--white);
+    font-family: 'JetBrains Mono', monospace; /* O la que uses */
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.1);
+}
+
+.btn-neon {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-neon:hover {
+    background: var(--accent);
+    color: var(--bg-black);
+    box-shadow: 0 0 25px var(--accent);
+}
+
+.status-msg {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    text-align: center;
+    min-height: 20px;
+}
+
+.status-msg.success { color: #00ff41; }
+.status-msg.error { color: #ff0000; }

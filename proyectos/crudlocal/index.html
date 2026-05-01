@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario Games</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="#">GameStock</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Inventario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Reportes</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="mb-4">Gestión de Videojuegos Físicos</h2>
+
+        <div class="card p-4 mb-5">
+            <h5 class="text-white mb-3" id="formTitle">Agregar Nuevo Juego</h5>
+            <form id="gameForm" class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label">Título</label>
+                    <input type="text" class="form-control" id="titulo" placeholder="Ej: Resident Evil 4" required>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Plataforma</label>
+                    <select class="form-select" id="plataforma">
+                        <option value="null">---</option>
+                        <option value="PS5">PlayStation</option>
+                        <option value="Xbox">Xbox</option>
+                        <option value="Switch">Nintendo Switch</option>
+                        <option value="PC">PC</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label">Estado</label>
+                    <select class="form-select" id="estado">
+                        <option value="null">---</option>
+                        <option value="Nuevo">Nuevo/Sellado</option>
+                        <option value="Usado">Usado</option>
+                        <option value="Coleccionista">Ed. Coleccionista</option>
+                    </select>
+                </div>
+                <div class="col-md-2 d-flex align-items-end">
+                    <button type="button" class="btn btn-primary w-100" onclick="guardarJuego()">Guardar Juego</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título del Videojuego</th>
+                        <th>Plataforma</th>
+                        <th>Estado</th>
+                        <th class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="gameTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
